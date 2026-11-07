@@ -1,0 +1,11 @@
+/* mylist.css — My List page */
+.mylist-bar { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; display: flex; justify-content: flex-end; }
+.card-wrap { display: flex; flex-direction: column; gap: 8px; }
+.card-wrap .remove {
+  background: transparent; border: 1px solid var(--border); color: var(--muted);
+  border-radius: 9px; padding: 7px; font-size: 12px; font-weight: 700; cursor: pointer; transition: .2s;
+}
+.card-wrap .remove:hover { border-color: var(--primary); color: #ff8a98; }
+.empty-list { text-align: center; padding: 50px 20px 30px; color: var(--muted); }
+.empty-list h2 { color: var(--text); margin: 0 0 8px; }
+.empty-list .hero-actions { margin-top: 18px; }

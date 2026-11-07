@@ -1,0 +1,97 @@
+/* ==========================================================
+   layout.css — header, navigation, hero, sections, footer
+   ========================================================== */
+
+/* ---------- Header ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  padding: 12px 26px;
+  background: linear-gradient(180deg, rgba(18, 7, 16, .97), rgba(18, 7, 16, .85));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 22px rgba(0, 0, 0, .4);
+}
+
+.brand-link { display: flex; align-items: center; gap: 8px; }
+.brand {
+  font-size: 22px; font-weight: 800; letter-spacing: .5px; white-space: nowrap;
+}
+.brand .r { color: var(--primary); text-shadow: 0 0 12px rgba(225, 29, 58, .5); }
+.brand-link .pop { font-size: 24px; }
+
+.nav-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav-links a {
+  padding: 9px 14px; border-radius: 9px; font-size: 15px; font-weight: 600;
+  color: var(--muted); transition: .2s;
+}
+.nav-links a:hover { color: var(--text); background: var(--surface); }
+.nav-links a.is-active {
+  color: var(--text); background: var(--primary);
+  box-shadow: 0 4px 14px rgba(225, 29, 58, .4);
+}
+
+.nav-right { display: flex; align-items: center; gap: 10px; }
+
+/* Hamburger (mobile only) */
+.nav-toggle {
+  display: none; margin-left: auto;
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  width: 42px; height: 42px; border-radius: 10px; font-size: 20px; cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 54px 26px 38px; text-align: center;
+  background: linear-gradient(180deg, rgba(225, 29, 58, .12), transparent 80%);
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 40px); margin: 0 0 10px; font-weight: 800;
+  background: linear-gradient(90deg, var(--text), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero p { color: var(--muted); max-width: 680px; margin: 0 auto; font-size: 16px; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+
+/* ---------- Sections ---------- */
+.section { max-width: var(--maxw); margin: 0 auto; padding: 8px 22px 6px; }
+.section-title {
+  font-size: 24px; font-weight: 800; color: var(--text);
+  display: flex; align-items: center; gap: 12px;
+  margin: 30px 0 16px; padding-left: 14px;
+  border-left: 5px solid var(--primary);
+}
+.section-title::after {
+  content: ""; flex: 1; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.section-title .see-all {
+  order: 2; font-size: 13px; font-weight: 700; color: var(--accent);
+  white-space: nowrap; order: 3;
+}
+.section-title .see-all:hover { text-decoration: underline; }
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 40px; padding: 34px 26px; text-align: center;
+  background: linear-gradient(180deg, transparent, rgba(31, 11, 24, .9));
+  border-top: 1px solid var(--border);
+}
+.footer .brand-link { justify-content: center; margin-bottom: 8px; display: inline-flex; }
+.footer-links { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin: 10px 0; }
+.footer-links a { color: var(--muted); font-size: 14px; }
+.footer-links a:hover { color: var(--accent); }
+.footer p { margin: 4px 0; color: var(--muted); font-size: 14px; }
+.footer p.ar { direction: rtl; }
+.footer .muted { font-size: 12px; opacity: .7; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .nav { padding: 10px 16px; gap: 10px; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav-links, .nav-right { display: none; width: 100%; }
+  .nav.open .nav-links { display: flex; flex-direction: column; }
+  .nav.open .nav-right { display: flex; }
+  .nav-search { order: 3; width: 100%; margin-left: 0; }
+  .hero { padding: 38px 18px 26px; }
+}
