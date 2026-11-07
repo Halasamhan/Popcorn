@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movies — PopCorn Palace</title>
+  <meta name="description" content="Romance, action and sci-fi movies. Pick a poster to open its details page.">
+  <meta name="theme-color" content="#120710">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍿%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="movies">
+  <main id="main">
+    <section class="hero">
+      <h1>Movies</h1>
+      <p>Romance, action and sci-fi. Click any poster to open its details page.</p>
+    </section>
+
+    <div id="sections" data-kinds="movie" data-filter></div>
+    <noscript><p class="empty-state">Please enable JavaScript to browse the catalog.</p></noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>

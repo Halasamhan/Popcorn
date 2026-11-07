@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In — PopCorn Palace</title>
+  <meta name="description" content="Sign in or create an account to use My List on PopCorn Palace.">
+  <meta name="theme-color" content="#120710">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍿%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/signin.css">
+</head>
+<body data-page="signin">
+  <main id="main" class="auth-wrap">
+    <div class="auth-card">
+      <div class="tabs" role="tablist" aria-label="Account">
+        <button class="tab on" type="button" role="tab" data-mode="signin" aria-selected="true">Sign In</button>
+        <button class="tab" type="button" role="tab" data-mode="signup" aria-selected="false">Create account</button>
+      </div>
+      <h1 id="title">Sign In</h1>
+      <p class="lead" id="lead">Welcome back. Continue to your PopCorn Palace account.</p>
+      <p class="next-note" id="next-note" hidden>🔒 Please sign in or create an account to continue.</p>
+
+      <form id="signin-form" novalidate>
+        <div class="field">
+          <label for="u">Email or mobile number</label>
+          <input id="u" type="text" name="username" placeholder="Email or mobile number"
+                 autocomplete="username" inputmode="email" required aria-describedby="u-err">
+          <div class="err" id="u-err">Enter a valid email or mobile number.</div>
+        </div>
+        <div class="field">
+          <label for="p">Password</label>
+          <div class="pw-wrap">
+            <input id="p" type="password" name="password" placeholder="At least 6 characters"
+                   autocomplete="current-password" required minlength="6" aria-describedby="p-err">
+            <button class="pw-toggle" id="pw-toggle" type="button" aria-pressed="false" aria-controls="p">Show</button>
+          </div>
+          <div class="err" id="p-err">Password must be at least 6 characters.</div>
+        </div>
+        <div class="field" id="confirm-field" hidden>
+          <label for="p2">Confirm password</label>
+          <input id="p2" type="password" autocomplete="new-password" placeholder="Repeat your password" aria-describedby="p2-err">
+          <div class="err" id="p2-err">Passwords don't match.</div>
+        </div>
+        <button class="btn-primary" id="submit" type="submit">Sign In</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="divider">or continue with</div>
+      <div class="social">
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+      <p class="recaptcha">Demo: accounts are stored only in this browser.</p>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/signin.js"></script>
+</body>
+</html>

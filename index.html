@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PopCorn Palace — Movies &amp; Series</title>
+  <meta name="description" content="Movies and series — from Hollywood blockbusters to K-dramas and C-dramas. Browse, search and discover on PopCorn Palace.">
+  <meta name="theme-color" content="#120710">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍿%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="home">
+  <main id="main">
+    <section class="hero">
+      <h1>Welcome to PopCorn Palace</h1>
+      <p>Movies and series — from Hollywood blockbusters to K-dramas and C-dramas. Click any poster for its info page, or use the search bar to find a title.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="movies.html">Browse Movies</a>
+        <a class="btn-ghost" href="series.html">Browse Series</a>
+      </div>
+    </section>
+
+    <div id="sections" data-kinds="movie,series,kdrama,cdrama" data-seeall></div>
+    <noscript><p class="empty-state">Please enable JavaScript to browse the catalog.</p></noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>
